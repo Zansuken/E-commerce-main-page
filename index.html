@@ -20,10 +20,21 @@
 
     <div class="nav_menu">
 
-      <input type="submit" class="hamburger_button" value="">
+      <label for="nav_check">
+      </label>
+
+      <input type="checkbox" id="hamburger_button" value="" name="nav_check">
+
 
       <nav>
 
+        <ul>
+          <li>Collections</li>
+          <li>Men</li>
+          <li>Women</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
       </nav>
 
       <img src="./images/logo.svg" class="logo" alt="sneakers logo">
@@ -39,25 +50,45 @@
     </div>
 
   </header>
-  Collections
-  Men
-  Women
-  About
-  Contact
 
-  Sneaker Company
+  <div class="carousel">
 
-  Fall Limited Edition Sneakers
+  </div>
 
-  These low-profile sneakers are your perfect casual wear companion. Featuring a
-  durable rubber outer sole, they’ll withstand everything the weather can offer.
+  <main>
 
-  $125.00
-  50%
-  $250.00
+    <h3>Sneaker Company</h3>
+    <h2>Fall Limited Edition Sneakers</h2>
+    <p>These low-profile sneakers are your perfect casual wear companion. Featuring a
+      durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+    <div class="prices">
 
-  0
-  Add to cart
+      <h2 id="actual_price">$125.00</h2>
+      <h3 id="promotion">50%</h3>
+      <p id="old_price">$250.00</p>
+
+    </div>
+
+    <div class="plus_minus">
+
+      <input type="submit" class="minus" value="">
+
+      <p id="amount">0</p>
+
+      <input type="submit" class="plus" value="">
+
+    </div>
+
+
+    <div class="add_to_cart">
+
+      <img src="./images/icon-cart.svg" alt="cart">
+      <p>Add to cart</p>
+
+    </div>
+  </main>
+
+  <script src="index.js"></script>
 
 </body>
 
