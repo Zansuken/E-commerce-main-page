@@ -343,6 +343,7 @@ ul {
     z-index: 20;
     box-shadow: -16px 10px 10px 10px;
     transform: translateX(-100%);
+    transition: 0.3s ease;
 }
 
 li {
