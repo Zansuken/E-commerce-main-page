@@ -223,7 +223,7 @@ h2 {
     border-radius: 8px;
 }
 
-.plus {
+#plus {
     width: 15px;
     height: 15px;
     /* margin: 0px 0 0px 20px; */
@@ -241,7 +241,7 @@ h2 {
     cursor: pointer;
 }
 
-.minus {
+#minus {
     width: 15px;
     height: 5px;
     /* margin: 0px 0 0px 20px; */
@@ -350,6 +350,7 @@ li {
     margin: 30px 0;
     font-weight: bold;
     font-size: 1.1em;
+    cursor: pointer;
 }
 
 main {
@@ -363,11 +364,15 @@ main {
     position: relative;
     height: 375px;
     width: 100%;
+    overflow: hidden;
 }
 
 .carousel img {
     display: flex;
     position: absolute;
     width: 100%;
-    max-width: 375px;
+    min-width: 375px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
 }
