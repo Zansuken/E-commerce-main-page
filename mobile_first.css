@@ -81,6 +81,20 @@ header {
     appearance: none;
 }
 
+#cross_button {
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    border: unset;
+    background-image: url(./images/icon-close.svg);
+    background-repeat: no-repeat;
+    background-color: unset;
+    vertical-align: middle;
+    align-items: center;
+    cursor: pointer;
+    appearance: none;
+}
+
 .logo {
     padding-bottom: 9px;
 }
@@ -305,6 +319,10 @@ header {
     margin-left: 20px;
 }
 
+#cross_button {
+    margin-bottom: 20px;
+}
+
 .profile_button {
     position: relative;
     top: -1px;
@@ -315,8 +333,22 @@ header {
     vertical-align: middle;
 }
 
-nav {
-    display: none;
+ul {
+    position: absolute;
+    width: 65%;
+    height: 100vh;
+    padding-left: 25px;
+    padding-top: 25px;
+    background: white;
+    z-index: 20;
+    box-shadow: -16px 10px 10px 10px;
+    transform: translateX(-100%);
+}
+
+li {
+    margin: 30px 0;
+    font-weight: bold;
+    font-size: 1.1em;
 }
 
 main {
