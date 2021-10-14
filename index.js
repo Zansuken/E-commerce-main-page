@@ -19,12 +19,14 @@ crossBtn.onclick = closeSidePanel;
 const increaseBtn = document.getElementById("plus");
 const decreaseBtn = document.getElementById("minus");
 let amountOfItems = document.getElementById("amount");
+
+amountOfItems.innerHTML = 0;
 let total = 0;
-amountOfItems = parseInt(amountOfItems.textContent)
+
 
 function increaseItem() {
     console.log("Adding an item");
-    amountOfItems.innerHTML = total++;
+    amountOfItems.innerHTML = ++total;
     console.log(total);
 }
 
@@ -32,8 +34,8 @@ function decreaseItem() {
     console.log("Removing an item");
     amountOfItems.innerHTML = total--;
     console.log(total);
-    if (total < 1) {
-        total = total + 1;
+    if (total <= 0) {
+        total = 0;
     }
 }
 

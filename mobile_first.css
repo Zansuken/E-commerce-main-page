@@ -266,14 +266,33 @@ h2 {
     margin-top: 25px;
 }
 
-.plus_minus p {
+#amount {
     font-weight: bold;
     align-items: center;
     position: relative;
     margin-left: auto;
     margin-right: auto;
     width: auto;
+    text-align: center;
+    background: transparent;
+    border: none;
 }
+
+#cache_misere {
+    background: transparent;
+    width: 174px;
+    height: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+}
+
+#amount:active {
+    background: transparent;
+    border: 0;
+    appearance: none;
+}
+
 .add_to_cart {
     background: hsl(26, 100%, 55%);
     border-radius: 8px;
