@@ -111,12 +111,98 @@ header {
     cursor: pointer;
 }
 
+.cart_statut {
+    display: flex;
+    cursor: pointer;
+}
+
+#total_preview {
+    display: none;
+    position: absolute;
+    background: hsl(26, 100%, 55%);
+    color: white;
+    width: 20px;
+    height: 13px;
+    padding-top: 1px;
+    border-radius: 10px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 0.7em;
+    transform: translateX(9px) translateY(-6px);
+}
+
+.cart_items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin: 20px 20px 0 20px;
+}
+
+.cart_items img {
+    width: 50px;
+    border-radius: 5px;
+}
+
+.cart_details p {
+    font-size: 0.9em;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+}
+
+#item_name {
+    margin-bottom: 6px;
+}
+
+#item_name, #unity_price, #total_items {
+    color: rgba(128, 128, 128, 0.63);
+}
+
+#total_charged {
+    font-weight: bold;
+}
+
+.cart_calculation {
+    display: flex;
+}
+
+.checkout {
+    background: hsl(26, 100%, 55%);
+    border-radius: 8px;
+    height: 50px;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.checkout p {
+    position: relative;
+    justify-content: center;
+    color: white;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
 .profile_button {
     width: 25px;
     height: 25px;
     border: unset;
     background-image: url(./images/image-avatar.png);
     background-size: contain;
+    background-repeat: no-repeat;
+    background-color: unset;
+    vertical-align: middle;
+    align-items: center;
+    cursor: pointer;
+}
+
+.delete_button {
+    width: 25px;
+    height: 25px;
+    border: unset;
+    background-image: url(./images/icon-delete.svg);
     background-repeat: no-repeat;
     background-color: unset;
     vertical-align: middle;
@@ -163,7 +249,7 @@ header {
     user-select: none;
 }
 
-h3, h2, p, .prices, .plus_minus, .add_to_cart {
+h3, h2, p, .prices, .plus_minus, .add_to_cart, .checkout {
     width: 90%;
     display: flex;
     position: relative;
@@ -300,13 +386,15 @@ h2 {
     margin-top: 20px;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 .add_to_cart p {
     position: relative;
     justify-content: center;
+    align-items: center;
     color: white;
-    font-size: 1.1em;
+    font-size: 0.9em;
     font-weight: bold;
 }
 
@@ -330,6 +418,28 @@ header {
     background-color: white;
 }
 
+.cart_content {
+    position: absolute;
+    top: 95px;
+    width: 95vw;
+    height: 250px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    z-index: 19;
+    border-radius: 8px;
+    box-shadow: 0px 6px 20px -12px;
+    display: none;
+}
+
+.cart_title {
+    font-weight: bold;
+    width: 100%;
+    margin: 25px 0 0 0;
+    padding: 0 0 25px 23px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.185);
+}
+
 #hamburger_button, .cart_button {
     margin-right: 12px;
 }
@@ -348,6 +458,7 @@ header {
 }
 
 .user_access {
+    display: flex;
     margin-right: 20px;
     vertical-align: middle;
 }

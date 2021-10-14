@@ -23,17 +23,16 @@ let amountOfItems = document.getElementById("amount");
 amountOfItems.innerHTML = 0;
 let total = 0;
 
+// Adding an item
 
 function increaseItem() {
-    console.log("Adding an item");
     amountOfItems.innerHTML = ++total;
-    console.log(total);
 }
 
+// Removing an item
+
 function decreaseItem() {
-    console.log("Removing an item");
     amountOfItems.innerHTML = total--;
-    console.log(total);
     if (total <= 0) {
         total = 0;
     }
