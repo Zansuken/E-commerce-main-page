@@ -99,7 +99,7 @@ header {
     padding-bottom: 9px;
 }
 
-.cart_button {
+#cart_button {
     width: 25px;
     height: 25px;
     border: unset;
@@ -109,6 +109,7 @@ header {
     vertical-align: middle;
     align-items: center;
     cursor: pointer;
+    appearance: none;
 }
 
 .cart_statut {
@@ -429,7 +430,7 @@ header {
     z-index: 19;
     border-radius: 8px;
     box-shadow: 0px 6px 20px -12px;
-    display: none;
+    /* display: none; */
 }
 
 .cart_title {
@@ -440,7 +441,7 @@ header {
     border-bottom: 1px solid rgba(128, 128, 128, 0.185);
 }
 
-#hamburger_button, .cart_button {
+#hamburger_button, #cart_button {
     margin-right: 12px;
 }
 

@@ -64,6 +64,19 @@ function decreaseItem() {
     }
 }
 
-
 increaseBtn.onclick = increaseItem;
 decreaseBtn.onclick = decreaseItem;
+
+// Cart panel
+
+const cartBtn = document.getElementById("cart_button");
+let cartPanel = document.querySelector(".cart_content");
+
+// cartPanel.style.transform = "translateX(150%)";
+
+function openAndCloseCartPanel() {
+    // console.log("hello");
+    // cartPanel.style.top = "95px";
+}
+
+cartBtn.onclick = openAndCloseCartPanel();
