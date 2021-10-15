@@ -117,7 +117,7 @@ header {
 }
 
 #total_preview {
-    display: none;
+    display: inline;
     position: absolute;
     background: hsl(26, 100%, 55%);
     color: white;
@@ -464,9 +464,10 @@ header {
 }
 
 ul {
-    position: absolute;
+    position: fixed;
     width: 65%;
-    height: 100vh;
+    min-height: 100%;
+    height: auto !important;
     padding-left: 25px;
     padding-top: 25px;
     background: white;

@@ -19,6 +19,7 @@ crossBtn.onclick = closeSidePanel;
 const increaseBtn = document.getElementById("plus");
 const decreaseBtn = document.getElementById("minus");
 let amountOfItems = document.getElementById("amount");
+let previewCartTotal = document.getElementById("total_preview");
 
 amountOfItems.innerHTML = 0;
 let total = 0;
@@ -27,14 +28,39 @@ let total = 0;
 
 function increaseItem() {
     amountOfItems.innerHTML = ++total;
+
+    if (total < 1) {
+        previewCartTotal.style.display = "none";
+    } else {
+        previewCartTotal.style.display = "block";
+        previewCartTotal.innerHTML = total;
+    }
+
+    if (total < 1) {
+        previewCartTotal.style.display = "none";
+    } else {
+        previewCartTotal.style.display = "block";
+        previewCartTotal.innerHTML = total;
+    }
 }
 
 // Removing an item
 
+if (total < 1) {
+    previewCartTotal.style.display = "none";
+}
+
 function decreaseItem() {
-    amountOfItems.innerHTML = total--;
     if (total <= 0) {
         total = 0;
+    }
+    amountOfItems.innerHTML = --total;
+
+    if (total < 1) {
+        previewCartTotal.style.display = "none";
+    } else {
+        previewCartTotal.style.display = "block";
+        previewCartTotal.innerHTML = total;
     }
 }
 
