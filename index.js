@@ -69,14 +69,11 @@ decreaseBtn.onclick = decreaseItem;
 
 // Cart panel
 
-const cartBtn = document.getElementById("cart_button");
-let cartPanel = document.querySelector(".cart_content");
-
-// cartPanel.style.transform = "translateX(150%)";
-
-function openAndCloseCartPanel() {
-    // console.log("hello");
-    // cartPanel.style.top = "95px";
-}
-
-cartBtn.onclick = openAndCloseCartPanel();
+document.getElementById('cart_button').addEventListener("click", function () {
+    menu = document.getElementById("cart_content");
+    if (menu.style.display == "block") {
+        document.getElementById("cart_content").style.display = "none";
+    } else {
+        document.getElementById("cart_content").style.display = "block";
+    }
+}, false);

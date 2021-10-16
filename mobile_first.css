@@ -419,7 +419,7 @@ header {
     background-color: white;
 }
 
-.cart_content {
+#cart_content {
     position: absolute;
     top: 95px;
     width: 95vw;
@@ -430,7 +430,7 @@ header {
     z-index: 19;
     border-radius: 8px;
     box-shadow: 0px 6px 20px -12px;
-    /* display: none; */
+    display: none;
 }
 
 .cart_title {
