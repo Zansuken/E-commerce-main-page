@@ -41,8 +41,6 @@ function increaseItem() {
     } else {
         previewCartTotal.style.display = "inline";
         previewCartTotal.innerHTML = total;
-        totalItems.innerHTML = " x " + total;
-        totalCharged.innerHTML = "$ " + total * itemPrice;
     }
 
     if (total < 1) {
@@ -50,8 +48,6 @@ function increaseItem() {
     } else {
         previewCartTotal.style.display = "inline";
         previewCartTotal.innerHTML = total;
-        totalItems.innerHTML = " x " + total;
-        totalCharged.innerHTML = "$ " + total * itemPrice;
     }
 }
 
@@ -62,8 +58,6 @@ function decreaseItem() {
         total = 0;
     } else {
         amountOfItems.innerHTML = --total;
-        totalItems.innerHTML = " x " + total;
-        totalCharged.innerHTML = "$ " + total * itemPrice;
     }
 
     if (total <= -1) {
@@ -72,8 +66,6 @@ function decreaseItem() {
     } else {
         previewCartTotal.style.display = "inline";
         previewCartTotal.innerHTML = total;
-        totalItems.innerHTML = " x " + total;
-        totalCharged.innerHTML = "$ " + total * itemPrice;
     }
 
     if (total > 0) {
@@ -108,3 +100,13 @@ document.getElementById('cart_button').addEventListener("click", function () {
         document.getElementById("cart_content").style.display = "block";
     }
 }, false);
+
+// Adding items to cart
+
+let actualTotal = 0;
+
+document.getElementById("add_to_cart").addEventListener("click", function () {
+    actualTotal = actualTotal + (1 * total);
+    totalItems.innerHTML = " x " + actualTotal;
+    totalCharged.innerHTML = "$ " + actualTotal * itemPrice;
+})

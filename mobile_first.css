@@ -250,7 +250,7 @@ header {
     user-select: none;
 }
 
-h3, h2, p, .prices, .plus_minus, .add_to_cart, .checkout {
+h3, h2, p, .prices, .plus_minus, #add_to_cart, .checkout {
     width: 90%;
     display: flex;
     position: relative;
@@ -380,7 +380,7 @@ h2 {
     appearance: none;
 }
 
-.add_to_cart {
+#add_to_cart {
     background: hsl(26, 100%, 55%);
     border-radius: 8px;
     height: 50px;
@@ -390,7 +390,7 @@ h2 {
     cursor: pointer;
 }
 
-.add_to_cart p {
+#add_to_cart p {
     position: relative;
     justify-content: center;
     align-items: center;
