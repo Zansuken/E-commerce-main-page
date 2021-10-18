@@ -27,6 +27,10 @@ let total = 0;
 // Adding an item
 
 function increaseItem() {
+
+    if (total < 1) {
+        total = 0;
+    }
     amountOfItems.innerHTML = ++total;
 
     if (total < 1) {
@@ -46,17 +50,20 @@ function increaseItem() {
 
 // Removing an item
 
-if (total < 1) {
-    previewCartTotal.style.display = "none";
-}
+// if (total < 0) {
+//     previewCartTotal.style.display = "none";
+//     total = 0;
+// }
 
 function decreaseItem() {
-    if (total <= 0) {
-        total = 0;
-    }
-    amountOfItems.innerHTML = --total;
-
     if (total < 1) {
+        total = 0;
+    } else {
+        amountOfItems.innerHTML = --total;
+    }
+
+    if (total <= -1) {
+        total = 1;
         previewCartTotal.style.display = "none";
     } else {
         previewCartTotal.style.display = "block";
@@ -77,3 +84,4 @@ document.getElementById('cart_button').addEventListener("click", function () {
         document.getElementById("cart_content").style.display = "block";
     }
 }, false);
+
