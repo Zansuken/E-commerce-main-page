@@ -118,7 +118,7 @@ header {
 }
 
 #total_preview {
-    display: inline;
+    display: none;
     position: absolute;
     background: hsl(26, 100%, 55%);
     color: white;

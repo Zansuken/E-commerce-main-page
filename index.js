@@ -36,24 +36,19 @@ function increaseItem() {
     if (total < 1) {
         previewCartTotal.style.display = "none";
     } else {
-        previewCartTotal.style.display = "block";
+        previewCartTotal.style.display = "inline";
         previewCartTotal.innerHTML = total;
     }
 
     if (total < 1) {
         previewCartTotal.style.display = "none";
     } else {
-        previewCartTotal.style.display = "block";
+        previewCartTotal.style.display = "inline";
         previewCartTotal.innerHTML = total;
     }
 }
 
 // Removing an item
-
-// if (total < 0) {
-//     previewCartTotal.style.display = "none";
-//     total = 0;
-// }
 
 function decreaseItem() {
     if (total < 1) {
@@ -66,8 +61,14 @@ function decreaseItem() {
         total = 1;
         previewCartTotal.style.display = "none";
     } else {
-        previewCartTotal.style.display = "block";
+        previewCartTotal.style.display = "inline";
         previewCartTotal.innerHTML = total;
+    }
+
+    if (total > 0) {
+        previewCartTotal.style.display = "inline";
+    } else {
+        previewCartTotal.style.display = "none";
     }
 }
 
