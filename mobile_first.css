@@ -199,7 +199,7 @@ header {
     cursor: pointer;
 }
 
-.delete_button {
+#delete_button {
     width: 25px;
     height: 25px;
     border: unset;

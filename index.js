@@ -19,10 +19,13 @@ crossBtn.onclick = closeSidePanel;
 const increaseBtn = document.getElementById("plus");
 const decreaseBtn = document.getElementById("minus");
 let amountOfItems = document.getElementById("amount");
+let itemPrice = 125;
 let previewCartTotal = document.getElementById("total_preview");
 
-amountOfItems.innerHTML = 0;
+let totalItems = document.getElementById("total_items");
+let totalCharged = document.getElementById("total_charged");
 let total = 0;
+
 
 // Adding an item
 
@@ -38,6 +41,8 @@ function increaseItem() {
     } else {
         previewCartTotal.style.display = "inline";
         previewCartTotal.innerHTML = total;
+        totalItems.innerHTML = " x " + total;
+        totalCharged.innerHTML = "$ " + total * itemPrice;
     }
 
     if (total < 1) {
@@ -45,6 +50,8 @@ function increaseItem() {
     } else {
         previewCartTotal.style.display = "inline";
         previewCartTotal.innerHTML = total;
+        totalItems.innerHTML = " x " + total;
+        totalCharged.innerHTML = "$ " + total * itemPrice;
     }
 }
 
@@ -55,6 +62,8 @@ function decreaseItem() {
         total = 0;
     } else {
         amountOfItems.innerHTML = --total;
+        totalItems.innerHTML = " x " + total;
+        totalCharged.innerHTML = "$ " + total * itemPrice;
     }
 
     if (total <= -1) {
@@ -63,6 +72,8 @@ function decreaseItem() {
     } else {
         previewCartTotal.style.display = "inline";
         previewCartTotal.innerHTML = total;
+        totalItems.innerHTML = " x " + total;
+        totalCharged.innerHTML = "$ " + total * itemPrice;
     }
 
     if (total > 0) {
@@ -71,6 +82,18 @@ function decreaseItem() {
         previewCartTotal.style.display = "none";
     }
 }
+
+amountOfItems.innerHTML = 0;
+totalItems.innerHTML = " x " + total;
+
+document.getElementById("delete_button").addEventListener("click", function () {
+    total = 0;
+    amountOfItems.innerHTML = 0;
+    previewCartTotal.innerHTML = total;
+    previewCartTotal.style.display = "none";
+    totalItems.innerHTML = " x " + total;
+    totalCharged.innerHTML = "$ " + total * itemPrice;
+})
 
 increaseBtn.onclick = increaseItem;
 decreaseBtn.onclick = decreaseItem;
@@ -85,4 +108,3 @@ document.getElementById('cart_button').addEventListener("click", function () {
         document.getElementById("cart_content").style.display = "block";
     }
 }, false);
-
