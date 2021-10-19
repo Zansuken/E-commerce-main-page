@@ -24,10 +24,11 @@
 
     header {
         padding-top: 20px;
-        border-bottom: 1px solid rgba(128, 128, 128, 0.842);
+        border-bottom: 1px solid rgba(128, 128, 128, 0.192);
         position: relative;
         margin-left: auto;
         margin-right: auto;
+        margin-bottom: 100px;
         max-width: 1181px;
         left: 0;
     }
@@ -43,6 +44,11 @@
         margin-left: 30px;
     }
 
+    .profile_button:hover {
+        box-shadow: 0 0 0pt 2pt hsl(26, 100%, 55%);
+        border-radius: 50%;
+    }
+
     #nav_menu ul {
         display: flex;
         background: none;
@@ -56,12 +62,20 @@
         left: 200px;
         align-items: center;
         padding-top: 3px;
+        padding-bottom: 23px;
     }
     
     #nav_menu ul li {
         color: rgba(128, 128, 128, 0.842);
         margin-top: 0;
         margin-right: 30px;
+        padding-bottom: 41px;
+        margin-bottom: 0;
+        transform: translateY(5px);
+    }
+
+    #nav_menu ul li:hover {
+        border-bottom: solid 3px hsl(26, 100%, 55%);
     }
     
     #side_panel {
@@ -73,4 +87,89 @@
         max-width: 1181px;
     }
 
+    .main_flex {
+        display: flex;
+        width: 100%;
+        max-width: 1181px;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: space-between;
+    }
+
+    main {
+        margin-left: 80px;
+        margin-right: 30px;
+    }
+
+    h3 {
+        font-weight: bold;
+        font-size: 0.7em;
+    }
+
+    #product_description {
+        font-size: 0.8em;
+        margin-top: 35px;
+        margin-bottom: 30px;
+        padding: 0 20px;
+    }
+
+    .prices {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .prices h2 {
+        margin: 0 0 15px 0;
+    }
+
+    #old_price {
+        justify-content: left;
+        margin-left: 0;
+        font-size: 0.9em;
+    }
+
+    .price_promotion {
+        display: flex;
+    }
+
+    #promotion {
+        height: fit-content;
+        margin-left: 40px;
+        margin-bottom: 15px;
+        align-self: center;
+    }
+
+    #cart_content {
+        max-width: 400px;
+        right: 0;
+        transform: translateX(200px);
+    }
+
+    #adding_part_flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .plus_minus {
+        max-width: 30%;
+    }
+
+    #cache_misere {
+        max-width: 30px;
+    }
+
+    #add_to_cart {
+        max-width: 65%;
+        margin-top: 23px;
+    }
+
+    #add_to_cart:hover {
+        box-shadow: 0px 15px 13px -5px hsl(26deg 100% 55%);
+        filter: opacity(0.7);
+    }
+    
 }
+
+

@@ -77,9 +77,10 @@ document.getElementById('cart_button').addEventListener("click", function () {
         document.getElementById("cart_content").style.display = "block";
     }
 
-    if (total == 0) {
+    if (actualTotal == 0) {
         document.getElementById("empty_cart_msg").style.display = "flex";
         document.getElementById("cart_items").style.display = "none";
+        document.getElementById("checkout").style.display = "none";
     } else {
         document.getElementById("empty_cart_msg").style.display = "none";
         document.getElementById("cart_items").style.display = "flex";
@@ -91,23 +92,24 @@ document.getElementById('cart_button').addEventListener("click", function () {
 // Adding items to cart
 
 let actualTotal = 0;
+actualTotal = actualTotal + (1 * total);
 
 document.getElementById("add_to_cart").addEventListener("click", function () {
     actualTotal = actualTotal + (1 * total);
     totalItems.innerHTML = " x " + actualTotal;
     totalCharged.innerHTML = "$ " + actualTotal * itemPrice;
+    previewCartTotal.style.display = "inline";
+    previewCartTotal.innerHTML = actualTotal;
+    amountOfItems.innerHTML = 0;
+    total = 0;
 
-    if (total > 0) {
-        previewCartTotal.style.display = "inline";
-        previewCartTotal.innerHTML = actualTotal;
+    if (actualTotal > 0) {
         document.getElementById("empty_cart_msg").style.display = "none";
         document.getElementById("cart_items").style.display = "flex";
         document.getElementById("cart_thumbnail").style.display = "flex";
         document.getElementById("checkout").style.display = "flex";
-        amountOfItems.innerHTML = 0;
-    } else {
-        previewCartTotal.style.display = "none";
     }
+
 
 });
 

@@ -74,6 +74,7 @@
   <div id="cart_content">
 
     <p class="cart_title">Cart</p>
+    <div id="line"></div>
     <p id="empty_cart_msg">Your cart is empty.</p>
     <div id="cart_items">
 
@@ -100,51 +101,56 @@
 
   </div>
 
-  <div class="carousel">
+  <div class="main_flex">
+    <div class="carousel">
 
-    <a href="./images/image-product-1.jpg" class="carousel__img carousel__img--visible"><img
-        src="./images/image-product-1.jpg" alt=""></a>
-    <a href="./images/image-product-2.jpg" class="carousel__img"><img src="./images/image-product-2.jpg" alt=""></a>
-    <a href="./images/image-product-3.jpg" class="carousel__img"><img src="./images/image-product-3.jpg" alt=""></a>
-    <a href="./images/image-product-4.jpg" class="carousel__img"><img src="./images/image-product-4.jpg" alt=""></a>
-    <input type="submit" id="back_button" value="" name="back">
-    <input type="submit" id="next_button" value="" name="next">
+      <a href="./images/image-product-1.jpg" class="carousel__img carousel__img--visible"><img
+          src="./images/image-product-1.jpg" alt=""></a>
+      <a href="./images/image-product-2.jpg" class="carousel__img"><img src="./images/image-product-2.jpg" alt=""></a>
+      <a href="./images/image-product-3.jpg" class="carousel__img"><img src="./images/image-product-3.jpg" alt=""></a>
+      <a href="./images/image-product-4.jpg" class="carousel__img"><img src="./images/image-product-4.jpg" alt=""></a>
+      <input type="submit" id="back_button" value="" name="back">
+      <input type="submit" id="next_button" value="" name="next">
+    </div>
+
+    <main>
+
+      <h3>Sneaker Company</h3>
+      <h2>Fall Limited Edition Sneakers</h2>
+      <p id="product_description">These low-profile sneakers are your perfect casual wear companion. Featuring a
+        durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+      <div class="prices">
+        <div class="price_promotion">
+          <h2 id="actual_price">$125.00</h2>
+          <h3 id="promotion">50%</h3>
+        </div>
+        <p id="old_price">$250.00</p>
+
+      </div>
+
+      <div id="adding_part_flex">
+        <div class="plus_minus">
+
+          <input type="submit" id="minus" value="" onclick="increaseItem()">
+
+          <p id="amount"></p>
+
+          <div id="cache_misere"></div>
+
+          <input type="submit" id="plus" value="">
+
+        </div>
+
+
+        <div id="add_to_cart">
+
+
+          <p><img src="./images/icon-cart-white.svg" alt="cart" id="white_cart">Add to cart</p>
+
+        </div>
+      </div>
+    </main>
   </div>
-
-  <main>
-
-    <h3>Sneaker Company</h3>
-    <h2>Fall Limited Edition Sneakers</h2>
-    <p id="product_description">These low-profile sneakers are your perfect casual wear companion. Featuring a
-      durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
-    <div class="prices">
-
-      <h2 id="actual_price">$125.00</h2>
-      <h3 id="promotion">50%</h3>
-      <p id="old_price">$250.00</p>
-
-    </div>
-
-    <div class="plus_minus">
-
-      <input type="submit" id="minus" value="" onclick="increaseItem()">
-
-      <p id="amount"></p>
-
-      <div id="cache_misere"></div>
-
-      <input type="submit" id="plus" value="">
-
-    </div>
-
-
-    <div id="add_to_cart">
-
-
-      <p><img src="./images/icon-cart-white.svg" alt="cart" id="white_cart">Add to cart</p>
-
-    </div>
-  </main>
 
   <script src="index.js"></script>
 
