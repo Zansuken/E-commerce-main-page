@@ -36,19 +36,6 @@ function increaseItem() {
     }
     amountOfItems.innerHTML = ++total;
 
-    if (total < 1) {
-        previewCartTotal.style.display = "none";
-    } else {
-        previewCartTotal.style.display = "inline";
-        previewCartTotal.innerHTML = total;
-    }
-
-    if (total < 1) {
-        previewCartTotal.style.display = "none";
-    } else {
-        previewCartTotal.style.display = "inline";
-        previewCartTotal.innerHTML = total;
-    }
 }
 
 // Removing an item
@@ -58,20 +45,6 @@ function decreaseItem() {
         total = 0;
     } else {
         amountOfItems.innerHTML = --total;
-    }
-
-    if (total <= -1) {
-        total = 1;
-        previewCartTotal.style.display = "none";
-    } else {
-        previewCartTotal.style.display = "inline";
-        previewCartTotal.innerHTML = total;
-    }
-
-    if (total > 0) {
-        previewCartTotal.style.display = "inline";
-    } else {
-        previewCartTotal.style.display = "none";
     }
 }
 
@@ -109,4 +82,11 @@ document.getElementById("add_to_cart").addEventListener("click", function () {
     actualTotal = actualTotal + (1 * total);
     totalItems.innerHTML = " x " + actualTotal;
     totalCharged.innerHTML = "$ " + actualTotal * itemPrice;
+
+    if (total > 0) {
+        previewCartTotal.style.display = "inline";
+        previewCartTotal.innerHTML = actualTotal
+    } else {
+        previewCartTotal.style.display = "none";
+    }
 })
