@@ -104,8 +104,46 @@ document.getElementById("add_to_cart").addEventListener("click", function () {
         document.getElementById("cart_items").style.display = "flex";
         document.getElementById("cart_thumbnail").style.display = "flex";
         document.getElementById("checkout").style.display = "flex";
+        amountOfItems.innerHTML = 0;
     } else {
         previewCartTotal.style.display = "none";
     }
+
 });
+
+// Carousel
+
+const carouselImages = document.getElementsByClassName("carousel__img");
+const totalImages = carouselImages.length;
+let imagePosition = 0;
+
+document.getElementById("next_button").addEventListener("click", function moveToNextImage() {
+
+    for (let image of carouselImages) {
+        image.classList.remove("carousel__img--visible");
+        image.classList.add("carousel__img--hidden");
+    }
+    if (imagePosition == totalImages - 1) {
+        imagePosition = 0;
+    } else {
+        imagePosition++;
+    }
+
+    carouselImages[imagePosition].classList.add("carousel__img--visible");
+    console.log(imagePosition);
+})
+
+document.getElementById("back_button").addEventListener("click", function moveToPrevImage() {
+    for (let image of carouselImages) {
+        image.classList.remove("carousel__img--visible");
+        image.classList.add("carousel__img--hidden");
+    }
+    if (imagePosition == 0) {
+        imagePosition = totalImages - 1;
+    } else {
+        imagePosition--;
+    }
+    carouselImages[imagePosition].classList.add("carousel__img--visible");
+    console.log(imagePosition);
+})
 
