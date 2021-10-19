@@ -58,6 +58,10 @@ document.getElementById("delete_button").addEventListener("click", function () {
     previewCartTotal.style.display = "none";
     totalItems.innerHTML = " x " + total;
     totalCharged.innerHTML = "$ " + total * itemPrice;
+    document.getElementById("empty_cart_msg").style.display = "flex";
+    document.getElementById("cart_items").style.display = "none";
+    document.getElementById("checkout").style.display = "none";
+    actualTotal = 0;
 })
 
 increaseBtn.onclick = increaseItem;
@@ -72,6 +76,16 @@ document.getElementById('cart_button').addEventListener("click", function () {
     } else {
         document.getElementById("cart_content").style.display = "block";
     }
+
+    if (total == 0) {
+        document.getElementById("empty_cart_msg").style.display = "flex";
+        document.getElementById("cart_items").style.display = "none";
+    } else {
+        document.getElementById("empty_cart_msg").style.display = "none";
+        document.getElementById("cart_items").style.display = "flex";
+        document.getElementById("cart_thumbnail").style.display = "flex";
+        document.getElementById("checkout").style.display = "flex";
+    }
 }, false);
 
 // Adding items to cart
@@ -85,8 +99,13 @@ document.getElementById("add_to_cart").addEventListener("click", function () {
 
     if (total > 0) {
         previewCartTotal.style.display = "inline";
-        previewCartTotal.innerHTML = actualTotal
+        previewCartTotal.innerHTML = actualTotal;
+        document.getElementById("empty_cart_msg").style.display = "none";
+        document.getElementById("cart_items").style.display = "flex";
+        document.getElementById("cart_thumbnail").style.display = "flex";
+        document.getElementById("checkout").style.display = "flex";
     } else {
         previewCartTotal.style.display = "none";
     }
-})
+});
+
