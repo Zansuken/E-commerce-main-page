@@ -130,7 +130,6 @@ document.getElementById("next_button").addEventListener("click", function moveTo
     }
 
     carouselImages[imagePosition].classList.add("carousel__img--visible");
-    console.log(imagePosition);
 })
 
 document.getElementById("back_button").addEventListener("click", function moveToPrevImage() {
@@ -144,6 +143,5 @@ document.getElementById("back_button").addEventListener("click", function moveTo
         imagePosition--;
     }
     carouselImages[imagePosition].classList.add("carousel__img--visible");
-    console.log(imagePosition);
 })
 
