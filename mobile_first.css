@@ -525,6 +525,10 @@ main {
     overflow: hidden;
 }
 
+.thumbnails {
+    display: none;
+}
+
 .carousel img {
     display: flex;
     position: absolute;

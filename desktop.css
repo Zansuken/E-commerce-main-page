@@ -138,6 +138,7 @@
         margin-left: 40px;
         margin-bottom: 15px;
         align-self: center;
+        border-radius: 4px;
     }
 
     #cart_content {
@@ -154,6 +155,7 @@
 
     .plus_minus {
         max-width: 30%;
+        min-width: 120px;
     }
 
     #cache_misere {
@@ -162,6 +164,7 @@
 
     #add_to_cart {
         max-width: 65%;
+        min-width: 170px;
         margin-top: 23px;
     }
 
@@ -169,7 +172,36 @@
         box-shadow: 0px 15px 13px -5px hsl(26deg 100% 55%);
         filter: opacity(0.7);
     }
-    
+
+    .carousel {
+        border-radius: 10px;
+        width: 500px;
+        height: 500px;
+        transition: 0.3s ease;
+    }
+
+    .thumbnails {
+        display: block;
+    }
+
+    .preview {
+        display: flex;
+        justify-content: space-between;
+        width: 500px;
+        height: 100px;
+        margin-top: 33px;
+    }
+
+    .preview img {
+        border-radius: 10px;
+    }
+
+    .preview img:hover {
+        box-shadow: 0 0 0pt 2pt hsl(26, 100%, 55%);
+        filter: opacity(0.7);
+        cursor: pointer;
+    }
+
 }
 
 

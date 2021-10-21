@@ -113,7 +113,7 @@ document.getElementById("add_to_cart").addEventListener("click", function () {
 
 });
 
-// Carousel
+// Mobile Carousel
 
 const carouselImages = document.getElementsByClassName("carousel__img");
 const totalImages = carouselImages.length;
@@ -147,3 +147,35 @@ document.getElementById("back_button").addEventListener("click", function moveTo
     carouselImages[imagePosition].classList.add("carousel__img--visible");
 })
 
+// Desktop Carousel
+
+const thumbnails = document.getElementsByClassName("thumbnails");
+const link1 = document.getElementById("link1");
+const link2 = document.getElementById("link2");
+const link3 = document.getElementById("link3");
+const link4 = document.getElementById("link4");
+const actualPreview = document.getElementById("actual_preview")
+const thumb1 = document.getElementById("thumb1");
+const thumb2 = document.getElementById("thumb2");
+const thumb3 = document.getElementById("thumb3");
+const thumb4 = document.getElementById("thumb4");
+
+thumb1.addEventListener("click", function selectFirst() {
+    actualPreview.src = "./images/image-product-1.jpg";
+    link1.href = "./images/image-product-1.jpg";
+})
+
+thumb2.addEventListener("click", function selectSecond() {
+    actualPreview.src = "./images/image-product-2.jpg";
+    link1.href = "./images/image-product-2.jpg";
+})
+
+thumb3.addEventListener("click", function selectThird() {
+    actualPreview.src = "./images/image-product-3.jpg";
+    link1.href = "./images/image-product-3.jpg";
+})
+
+thumb4.addEventListener("click", function selectFourth() {
+    actualPreview.src = "./images/image-product-4.jpg";
+    link1.href = "./images/image-product-4.jpg";
+})
